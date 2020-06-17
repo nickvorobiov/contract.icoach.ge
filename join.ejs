@@ -1,0 +1,319 @@
+<style type="text/css">
+  #contract .placeholder {
+    border: dotted #666 4px;
+    width: 100%;
+    display: inline-block;
+    height: 3em;
+  }
+  .x2 {
+    height: 5em !important;
+  }
+  .x3 {
+    height: 7em !important;
+  }
+  .x4 {
+    height: 9em !important;
+  }
+
+  #contract h2 {
+    font-size: 18pt;
+  }
+  #contract h3 {
+    font-size: 14pt;
+    margin: 0;
+  }
+
+  @media print {
+    html, body {
+      height: auto;
+      font-size: 10pt; /* changing to 10pt has no impact */
+    }
+    #contract h2 {
+      font-size: 14pt;
+    }
+    #contract h3 {
+      font-size: 12pt;
+      margin: 0;
+    }
+    .block {
+      padding-bottom: 0;
+    }
+  }
+</style>
+<h2 class="text-center">Дополнительное соглашение к публичной оферте</h2>
+<p>Принимая во внимание, что:</p>
+<div style="padding-left: 2em;">
+  <p>Настоящее дополнительное соглашение является неотъемлемой частью публичной оферты размещенной в сети Интернет по адресу http://icoach.io/offer/ (далее — Оферта). Полным и безоговорочным принятием Оферты является подписание настоящего соглашения.</p>
+  <p>Настоящее соглашение определяет индивидуальные условия выполнения Продюсером работ по продвижению Автора. Общие условия выполнения работ определены Офертой.</p>
+  <p>Настоящее соглашение является неотъемлемой частью единого соглашения образуемого совместно с Офертой, оферта и соглашение не могут рассматриваться отдельно друг от друга.</p>
+  <p>Настоящее соглашение выражает полную договоренность между Сторонами и заменяет все предшествующие устные и письменные договоренности и соглашения сторон в отношении его предмета и условий.</p>
+</div>
+<p>стороны договорились о следующих индивидуальных условиях выполнения работ по продвижению:</p>
+<table class="table table-condensed">
+  <tr>
+    <td>№</td>
+    <td>Наименование</td>
+    <td>
+      Содержание условий
+    </td>
+  </tr>
+  <tr>
+    <td><h3>1.</h3></td>
+    <td colspan="2"><h3>Реквизиты соглашения</h3></td>
+  </tr>
+  <tr>
+    <td>1.1.</td>
+    <td>Номер</td>
+    <td><%= number %></td>
+  </tr>
+  <tr>
+    <td>1.2.</td>
+    <td>Дата</td>
+    <td><%= date %></td>
+  </tr>
+  <tr>
+    <td><h3>2.</h3></td>
+    <td colspan="2"><h3>Стороны</h3></td>
+  </tr>
+  <tr>
+    <td>2.1.</td>
+    <td>Продюсер</td>
+    <td>ICOACH LLC</td>
+  </tr>
+  <tr>
+    <td>2.2.</td>
+    <td>Автор</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td><h3>3.</h3></td>
+    <td colspan="2"><h3>Описание продвигаемого продукта (услуги) Автора</h3></td>
+  </tr>
+  <tr>
+    <td>3.1.</td>
+    <td>Формат первого шага</td>
+    <td>
+      <% if (firststep == 'consult') { %> Бесплатная консультация <% } %>
+      <% if (firststep == 'webinar') { %> Бесплатный вебинар      <% } %>
+      <% if (firststep == 'mk'     ) { %> Бесплатный мастер-класс <% } %>
+      <% if (firststep == 'test'   ) { %> Бесплатный тест-драйв   <% } %>
+    </td>
+  </tr>
+  <tr>
+    <td>3.2.</td>
+    <td>Формат основного продукта</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td>3.3.</td>
+    <td>Тема основного продукта</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td><h3>4.</h3></td>
+    <td colspan="2"><h3>Финансовые условия</h3></td>
+  </tr>
+  <%
+    var packages = {
+      start: 'Старт',
+      //startplus: 'Старт+',
+      optimal: 'Оптимальный',
+      premium: 'Премиум',
+      //test: 'Тест ниши',
+      basic: 'Лёгкий старт',
+      custom: 'Индивидуальный'
+    }
+  %>
+  <tr>
+    <td>4.1.</td>
+    <td>Тариф</td>
+    <td>
+      <%= packages[package] %>
+    </td>
+  </tr>
+  <tr>
+    <td>4.2.</td>
+    <td>Стоимость</td>
+    <td>
+      <% 
+        if (form == 'turnkey') { percent = false }
+        else if (form == 'partner') { percent = 30; percenttext = 'тридцать' }
+        else if (form == 'partner20') { percent = 30; percenttext = 'двадцать' }
+        else if (form == 'friend') { percent = 30; percenttext = 'десять' }
+      %>
+        
+      <%= price %> USD <% if (percent) { %> и <%=percent%>% от маркетинговой прибыли<% } %>
+    </td>
+  </tr>
+  <tr>
+    <td>4.3.</td>
+    <td>Порядок оплаты</td>
+    <td>
+      <% var half = price / 2 %>
+      <% if (half >= 500) { %>
+        Предоплата <%= half %> USD до начала выполнения работ, <%= half %> USD после завершения второго этапа продвижения.
+      <% } else { %>
+        Предоплата <%= half*2 %> USD до начала выполнения работ.
+      <% } %>
+      <% if (form == 'partner') { %>
+        Начиная с третьего этапа в пользу Продюсера выплачивается <%=percent%>% (<%=percenttext%> процентов) от маркетинговой прибыли, которая рассчитывается как выручка от реализации услуг (продуктов) Автора, за вычетом потраченного рекламного бюджета, оплаты работ по ведению рекламной кампании на 4 этапе, связанных с получением выручки и уплачиваемых Автором налогов и комиссий платежных систем, и фактически понесённых Автором затрат, непосредственно связанных с оказанием услуги привлечённым клиентам.
+      <% } %>
+    </td>
+  </tr>
+  <tr>
+    <td><h3>5.</h3></td>
+    <td colspan="2"><h3>Сроки</h3></td>
+  </tr>
+  <tr>
+    <td>5.1.</td>
+    <td>Начало работ</td>
+    <td><%= date %></td>
+  </tr>
+  <tr>
+    <td>5.2.</td>
+    <td>Окончание работ</td>
+    <td>
+      До исполнения обязательств по Соглашению
+    </td>
+  </tr>
+  <tr>
+    <td><h3>6.</h3></td>
+    <td colspan="2"><h3>Схема запуска</h3></td>
+  </tr>
+  <% var budget = 200 %>
+  <% for (var n = 0; n < options.length; n++) { %>
+    <% var option = options[n]; %>
+    <% if (option.enabled) { %>
+      <% for (var p = 0; p < option.items.length; p++) { %>
+        <tr>
+          <% if (p == 0) { %>
+            <td>6.<%= n+1 %>.</td>
+            <td><%= option.name %></td>
+          <% } else { %>
+            <td></td>
+            <td></td>
+          <% } %>
+          <td><%-  %>
+            <% item = option.items[p] %>
+            <%= item.name %>:<br>
+            – <%- item.content.join("<br>– ") %>
+          </td>
+        </tr>
+      <% } %>
+      <%
+        if (option.id == 'leadmagnet') {
+          budget = 300;
+        }
+      %>
+    <% } else { %>
+      <tr>
+        <td>6.<%= n+1 %>.</td>
+        <td><%= option.name %></td>
+        <td>не входит</td>
+      </tr>
+    <% } %>
+  <% } %>
+  <tr>
+    <td><h3>7.</h3></td>
+    <td colspan="2"><h3>Рекламная кампания</h3></td>
+  </tr>
+  <tr>
+    <td>7.1.</td>
+    <td>Работы по настройке и тестированию рекламной кампании</td>
+    <td>
+      Проводятся до окончания Третьего этапа
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      Стоимость
+    </td>
+    <td>
+      Входят в стоимость выбранного тарифа
+    </td>
+  </tr>
+  <tr>
+    <td>7.2.</td>
+    <td>Работы по ведению рекламной кампании</td>
+    <td>
+      Проводятся в рамках Четвертого этапа
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      Стоимость
+    </td>
+    <td>
+      300 USD, ежемесячно
+    </td>
+  </tr>
+  <tr>
+    <td>7.3.</td>
+    <td>Тестовый рекламный бюджет</td>
+    <td>
+      <%= budget %> USD
+    </td>
+  </tr>
+  <tr>
+    <td>7.4.</td>
+    <td>Основной рекламный бюджет</td>
+    <td>
+      Определяется по результатам тестовой рекламной кампании
+    </td>
+  </tr>
+  <tr>
+    <td><h3>8.</h3></td>
+    <td colspan="2"><h3>Реквизиты сторон</h3></td>
+  </tr>
+  <tr>
+    <td>8.1.</td>
+    <td>Продюсер</td>
+    <td>
+      Nikolay Vorobyev
+      <br>ICOACH LLC
+      <br>111 Uznadze street, Tbilisi, Georgia
+      <br>Identification number 402090358
+    </td>
+  </tr>
+  <tr>
+    <td>8.2.</td>
+    <td>Автор</td>
+    <td><span class="placeholder x3"></span></td>
+  </tr>
+  <tr>
+    <td><h3>9.</h3></td>
+    <td colspan="2"><h3>Адреса электронной почты для юридически значимых сообщений</h3></td>
+  </tr>
+  <tr>
+    <td>9.1.</td>
+    <td>Продюсер</td>
+    <td>contract@icoach.io</td>
+  </tr>
+  <tr>
+    <td>9.2.</td>
+    <td>Автор</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td><h3>10.</h3></td>
+    <td colspan="2"><h3>Подписи сторон</h3></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+      <table style="width: 100%;">
+        <tr>
+          <td>10.1. Продюсер</td>
+          <td>10.2. Автор</td>
+        </tr>
+        <tr>
+          <td><span></span></td>
+          <td><span class="placeholder x3"></span></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

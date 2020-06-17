@@ -1,0 +1,321 @@
+<style type="text/css">
+  #contract .placeholder {
+    border: dotted #666 4px;
+    width: 100%;
+    display: inline-block;
+    height: 3em;
+  }
+  .x2 {
+    height: 5em !important;
+  }
+  .x3 {
+    height: 7em !important;
+  }
+  .x4 {
+    height: 9em !important;
+  }
+
+  #contract h2 {
+    font-size: 18pt;
+  }
+  #contract h3 {
+    font-size: 14pt;
+    margin: 0;
+  }
+
+  @media print {
+    html, body {
+      height: auto;
+      font-size: 10pt; /* changing to 10pt has no impact */
+    }
+    #contract h2 {
+      font-size: 14pt;
+    }
+    #contract h3 {
+      font-size: 12pt;
+      margin: 0;
+    }
+    .block {
+      padding-bottom: 0;
+    }
+  }
+</style>
+<h2 class="text-center">Agreement</h2>
+
+
+<p>Taking into account that:</p>
+<div style="padding-left: 2em;">
+  <p>This agreement is an integral part of the public offer placed on the Internet at http://icoach.io/offer-en/ (hereinafter referred to as the Offer). The Author accepts the Offer fully and unconditionally by signing this agreement.</p>
+  <p>This agreement defines the individual conditions for the producer to carry out work to promote the Author. General conditions of work are determined by the Offer.</p>
+  <p>This agreement is an integral part of a single agreement formed together with the Offer, the Offer and the Agreement can not be considered separately from each other.</p>
+  <p>This agreement expresses a complete agreement between the Parties and replaces all previous oral and written agreements of the parties regarding its subject matter and conditions.</p>
+</div>
+<p>The parties agreed on the following individual conditions for the implementation of works on promotion:</p>
+<table class="table table-condensed">
+  <tr>
+    <td>№</td>
+    <td>Name</td>
+    <td>
+      Terms
+    </td>
+  </tr>
+  <tr>
+    <td><h3>1.</h3></td>
+    <td colspan="2"><h3>Agreement details</h3></td>
+  </tr>
+  <tr>
+    <td>1.1.</td>
+    <td>Number</td>
+    <td><%= number %></td>
+  </tr>
+  <tr>
+    <td>1.2.</td>
+    <td>Date</td>
+    <td><%= date %></td>
+  </tr>
+  <tr>
+    <td><h3>2.</h3></td>
+    <td colspan="2"><h3>Parties</h3></td>
+  </tr>
+  <tr>
+    <td>2.1.</td>
+    <td>Producer</td>
+    <td>ICOACH LLC</td>
+  </tr>
+  <tr>
+    <td>2.2.</td>
+    <td>Author</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td><h3>3.</h3></td>
+    <td colspan="2"><h3>Description of the product (service) of the author</h3></td>
+  </tr>
+  <tr>
+    <td>3.1.</td>
+    <td>First step format</td>
+    <td>
+      <% if (firststep == 'consult') { %> Free consultation <% } %>
+      <% if (firststep == 'webinar') { %> Free webinar      <% } %>
+      <% if (firststep == 'mk'     ) { %> Free masterclass <% } %>
+      <% if (firststep == 'test'   ) { %> Free testdrive   <% } %>
+    </td>
+  </tr>
+  <tr>
+    <td>3.2.</td>
+    <td>Main product format</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td>3.3.</td>
+    <td>The main product topic</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td><h3>4.</h3></td>
+    <td colspan="2"><h3>Financial conditions</h3></td>
+  </tr>
+  <%
+    var packages = {
+      start: 'Start',
+      //startplus: 'Старт+',
+      optimal: 'Optimal',
+      premium: 'Premium',
+      //test: 'Тест ниши',
+      basic: 'Light',
+      custom: 'Custom'
+    }
+  %>
+  <tr>
+    <td>4.1.</td>
+    <td>Rate</td>
+    <td>
+      <%= packages[package] %>
+    </td>
+  </tr>
+  <tr>
+    <td>4.2.</td>
+    <td>Cost</td>
+    <td>
+      <% 
+        if (form == 'turnkey') { percent = false }
+        else if (form == 'partner') { percent = 30; percenttext = 'thirty' }
+        else if (form == 'partner20') { percent = 30; percenttext = 'twenty' }
+        else if (form == 'friend') { percent = 30; percenttext = 'ten' }
+      %>
+        
+      <%= price %> USD <% if (percent) { %> и <%=percent%>% of marketing profits<% } %>
+    </td>
+  </tr>
+  <tr>
+    <td>4.3.</td>
+    <td>Payment order</td>
+    <td>
+      <% var half = price / 2 %>
+      <% if (half >= 500) { %>
+        Prepay <%= half %> USD before starting of works, <%= half %> USD after the completion of the second stage of promotion.
+      <% } else { %>
+        Prepay <%= half*2 %> USD before starting of works.
+      <% } %>
+      <% if (form == 'partner') { %>
+        Starting from the third stage, <%=percent%>% (<%=percenttext%> percent) of marketing profit is paid by the Author in favor of the Producer. Marketing profit is calculated as revenue from the sale of services (products) of the Author, minus the advertising budget spent, payment for work on the advertising campaign at stage 4, taxes and commissions of payment systems associated with the receipt of the proceeds and paid by the Author, and the costs actually incurred by the Author directly related to the provision of services to attracted clients.
+      <% } %>
+    </td>
+  </tr>
+  <tr>
+    <td><h3>5.</h3></td>
+    <td colspan="2"><h3>Timing</h3></td>
+  </tr>
+  <tr>
+    <td>5.1.</td>
+    <td>Beginning of work</td>
+    <td><%= date %></td>
+  </tr>
+  <tr>
+    <td>5.2.</td>
+    <td>Completion of work</td>
+    <td>
+      Until fulfillment of obligations.
+    </td>
+  </tr>
+  <tr>
+    <td><h3>6.</h3></td>
+    <td colspan="2"><h3>Startup scheme</h3></td>
+  </tr>
+  <% var budget = 200 %>
+  <% for (var n = 0; n < options.length; n++) { %>
+    <% var option = options[n]; %>
+    <% if (option.enabled) { %>
+      <% for (var p = 0; p < option.items.length; p++) { %>
+        <tr>
+          <% if (p == 0) { %>
+            <td>6.<%= n+1 %>.</td>
+            <td><%= option.name %></td>
+          <% } else { %>
+            <td></td>
+            <td></td>
+          <% } %>
+          <td><%-  %>
+            <% item = option.items[p] %>
+            <%= item.name %>:<br>
+            – <%- item.content.join("<br>– ") %>
+          </td>
+        </tr>
+      <% } %>
+      <%
+        if (option.id == 'leadmagnet') {
+          budget = 300;
+        }
+      %>
+    <% } else { %>
+      <tr>
+        <td>6.<%= n+1 %>.</td>
+        <td><%= option.name %></td>
+        <td>не входит</td>
+      </tr>
+    <% } %>
+  <% } %>
+  <tr>
+    <td><h3>7.</h3></td>
+    <td colspan="2"><h3>Advertising campaign</h3></td>
+  </tr>
+  <tr>
+    <td>7.1.</td>
+    <td>Works on advertising campaign setup and testing</td>
+    <td>
+      Held during the third stage
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      Cost
+    </td>
+    <td>
+      Included in this agreement amount
+    </td>
+  </tr>
+  <tr>
+    <td>7.2.</td>
+    <td>Works on advertising campaign after testing</td>
+    <td>
+      Held during the fourth stage
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      Cost
+    </td>
+    <td>
+      300 USD, monthly
+    </td>
+  </tr>
+  <tr>
+    <td>7.3.</td>
+    <td>Test advertising budget</td>
+    <td>
+      <%= budget %> USD
+    </td>
+  </tr>
+  <tr>
+    <td>7.4.</td>
+    <td>Main advertising budget</td>
+    <td>
+      Determined by the results of the test campaign
+    </td>
+  </tr>
+  <tr>
+    <td><h3>8.</h3></td>
+    <td colspan="2"><h3>Parties</h3></td>
+  </tr>
+  <tr>
+    <td>8.1.</td>
+    <td>Producer</td>
+    <td>
+      Nikolay Vorobyev
+      <br>ICOACH LLC
+      <br>111 Uznadze street, Tbilisi, Georgia
+      <br>Identification number 402090358
+    </td>
+  </tr>
+  <tr>
+    <td>8.2.</td>
+    <td>Author</td>
+    <td><span class="placeholder x3"></span></td>
+  </tr>
+  <tr>
+    <td><h3>9.</h3></td>
+    <td colspan="2"><h3>Email addresses</h3></td>
+  </tr>
+  <tr>
+    <td>9.1.</td>
+    <td>Producer</td>
+    <td>contract@icoach.io</td>
+  </tr>
+  <tr>
+    <td>9.2.</td>
+    <td>Author</td>
+    <td><span class="placeholder"></span></td>
+  </tr>
+  <tr>
+    <td><h3>10.</h3></td>
+    <td colspan="2"><h3>Signatures</h3></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+      <table style="width: 100%;">
+        <tr>
+          <td>10.1. Producer</td>
+          <td>10.2. Author</td>
+        </tr>
+        <tr>
+          <td><span></span></td>
+          <td><span class="placeholder x3"></span></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

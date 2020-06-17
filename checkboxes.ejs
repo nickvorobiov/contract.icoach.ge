@@ -1,0 +1,14 @@
+<% for (var n = 0; n < options.length; n++) { %>
+  <% var option = options[n]; %>
+
+  <div class="checkbox custom-control custom-checkbox">
+    <label>
+      <input type="checkbox" data-option="<%= option.id %>" <% if (option.enabled) { %>checked<% } %> onclick="return false;">
+      <span class="custom-control-indicator"></span>
+      <%= option.name %>
+    </label>
+  </div>
+
+<% } %>
+
+Сумма контракта <span id="price"></span>

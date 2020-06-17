@@ -1,0 +1,564 @@
+-
+  name: Ведение проекта на первом этапе
+  option: 
+  content: Предоставление менеджера проекта на первый этап<br>Запуск проекта и подготовка брифа<br>Консультирование по заполнению брифа<br>Проверка и приемка брифа<br>Консультирование по концепции запуска<br>Создание концепции запуска
+  price: 50 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: Видеоприглашение
+  option: да/нет
+  content: Выдача структуры видеоприглашения<br>Консультирование по записи видео<br>Проверка и приемка видео
+  price: 13 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: Ведение проекта на втором этапе
+  option: 
+  content: Предоставление менеджера проекта на второй этап<br>Подбор команды исполнителей на второй этап
+  price: 10 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: Лендинг первого шага
+  option: использовать существующий
+  content: Подключение пикселя
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: создать новый в стандартном дизайне
+  content: Написание текста лендинга<br>Верстка в стандартный шаблон и программирование лендинга
+  price: 25 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: 
+  option: создать новый в индивидуальном дизайне
+  content: Написание текста лендинга<br>Разработка макета дизайна лендинга<br>Верстка по макету и программирование лендинга
+  price: 45 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Сбор контактов на первый шаг
+  option: через facebook messenger
+  content: Настройка подписки на рассылку в фейсбуке<br>Написание текста сообщений приветствия и подтверждения подписки<br>Настройка чатбота на отправку сообщений приветствия, запроса контактов, и подтверждения подписки
+  price: 5 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: 
+  option: через стандартную форму заказа
+  content: Подключение стандартной формы заказа<br>Создание страницы благодарности
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: через подписную форму
+  content: Создание списка рассылки в системе емейл маркетинга<br>Создание подписной формы<br>Подключение подписной формы<br>Создание страницы подтверждения подписки<br>Написание текста сообщения подтверждения подписки<br>Настройка отправки сообщения подтверждения подписки<br>Создание страницы благодарности
+  price: 10 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: через существующую форму
+  content: Подключение предоставленной формы
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Подключение CRM
+  option: подключение новой
+  content: Настройка системы управления клиентами Trello<br>Подключение уведомлений о новых заявках в Telegram<br>Обучение пользованию системой управления клиентами
+  price: 5 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: 
+  option: интеграция с существующей
+  content: Интеграция с существующей системой управления клиентами
+  price: 15 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Прогревочное видео
+  option: да/нет
+  content: Выдача структуры прогревочного видео<br>Консультирование по записи видео<br>Проверка и приемка видео<br>Создание страницы с прогревочным видео
+  price: 17 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Рассылка напоминаний прийти на мероприятие
+  option: да/нет
+  content: Написание текста сообщений напоминания прийти<br>Настройка автоматической отправки напоминаний прийти
+  price: 4 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: План продающего первого шага
+  option: вебинар онлайн
+  content: План продающего вебинара
+  price: 3 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: 
+  option: мастер-класс оффлайн
+  content: План продающего мастер-класса<br>Скрипты прозвона заявок на мастер-класс
+  price: 5 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: 
+  option: продающая консультация
+  content: План продающей консультации
+  price: 3 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: Лендинг основного продукта
+  option: не нужен, только страница заказа
+  content: Создание страницы заказа основного продукта<br>Подключение формы заказа
+  price: 5 000
+  packages:
+    start: included
+    startplus: 
+    optimal: 
+    premium: 
+    test: included
+    leads: included
+-
+  name: 
+  option: использовать существующий
+  content: Подключение пикселя
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: создать новый в стандартном дизайне
+  content: Написание текста лендинга<br>Верстка в стандартный шаблон и программирование лендинга<br>Подключение формы заказа
+  price: 35 000
+  packages:
+    start:
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: 
+  option: создать новый в индивидуальном дизайне
+  content: Написание текста лендинга<br>Разработка макета дизайна лендинга<br>Верстка по макету и программирование лендинга<br>Подключение формы заказа
+  price: 55 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Страница в facebook
+  option: использовать существующую
+  content: 
+  price: 
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: создать новую в стандартном дизайне
+  content: Создание страницы в facebook<br>Стандартное оформление страницы в facebook<br>Стандартное наполнение страницы в facebook
+  price: 8 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: 
+  option: создать новую в индивидуальном дизайне
+  content: Создание страницы в facebook<br>Разработка макета дизайна страницы в facebook<br>Оформление страницы в facebook в соответствии с макетом<br>Стандартное наполнение страницы в facebook
+  price: 18 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Лидмагнит
+  option: изготовить новый
+  content: Выбор 5 возможных тем лидмагнитов<br>Написание текста лидмагнита<br>Верстка лидмагнита в PDF
+  price: 20 000
+  packages:
+    start:
+    startplus: 
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: 
+  option: использовать существующий
+  content: Подбор 5 вариантов названия лидмагнита
+  price: 10 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: не нужен
+  content: 
+  price: 
+  packages:
+    start: included
+    startplus: included
+    optimal: 
+    premium: 
+    test: included
+    leads: included
+-
+  name: Лендинг лидмагнита
+  option: в стандартном дизайне
+  content: Написание текста лендинга<br>Верстка в стандартный шаблон и программирование лендинга<br>Подключение формы заказа
+  price: 15 000
+  packages:
+    start:
+    startplus: 
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: 
+  option: в индивидуальном дизайне
+  content: Написание текста лендинга<br>Разработка макета дизайна лендинга<br>Верстка по макету и программирование лендинга<br>Подключение формы заказа
+  price: 25 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: не нужен
+  content: 
+  price: 
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: Сбор контактов на лидмагнит
+  option: через facebook messenger
+  content: Настройка подписки на рассылку в фейсбуке<br>Написание текста сообщений приветствия и подтверждения подписки<br>Настройка чатбота на отправку сообщений приветствия, запроса контактов, и подтверждения подписки
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: 
+  option: через стандартную форму заказа
+  content: Подключение стандартной формы заказа<br>Создание страницы благодарности
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: через подписную форму
+  content: Создание списка рассылки в системе емейл маркетинга<br>Создание подписной формы<br>Подключение подписной формы<br>Создание страницы подтверждения подписки<br>Написание текста сообщения подтверждения подписки<br>Настройка отправки сообщения подтверждения подписки<br>Создание страницы благодарности
+  price: 10 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: через существующую форму
+  content: Подключение предоставленной формы
+  price: 5 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Серия прогревочных писем для скачавших лидмагнит
+  option: да/нет
+  content: Создание плана продающих сообщений<br>Написание продающих сообщений<br>Настройка отправки серии сообщений
+  price: 30 000
+  packages:
+    start:
+    startplus: 
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: Серия прогревочных писем для записавшихся на первый шаг
+  option: да/нет
+  content: Создание плана продающих сообщений<br>Написание продающих сообщений<br>Настройка отправки серии сообщений
+  price: 30 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: included
+    test: 
+    leads: 
+-
+  name: Серия дожимающих писем для прошедших первый шаг
+  option: да/нет
+  content: Создание плана продающих сообщений<br>Написание продающих сообщений<br>Настройка отправки серии сообщений
+  price: 30 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: included
+    test: 
+    leads: 
+-
+  name: Прогревочный контент для страницы в соцсети
+  option: да/нет
+  content: Создание контент-плана для паблика<br>Написание прогревочного контента для паблика<br>Оформление для контента<br>Размещение контента в паблике
+  price: 38 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: included
+    test: 
+    leads: 
+-
+  name: Ведение проекта на третьем этапе
+  option: 
+  content: Контроль за обработкой заявок в течение третьего этапа
+  price: 5 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: included
+    leads: included
+-
+  name: Настройка рекламы на первый шаг
+  option: один первый шаг
+  content: Создание баннеров<br>Подбор аудиторий<br>Подготовка рекламных объявлений<br>Настройка и запуск рекламы<br>Отчёт по результатам тестовой рекламной кампании
+  price: 20 000
+  packages:
+    start: included
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: included
+-
+  name: 
+  option: тестирование 5 вариантов первого шага
+  content: Создание баннеров<br>Подбор аудиторий<br>Подготовка рекламных объявлений<br>Настройка и запуск рекламы<br>Отчёт по результатам тестовой рекламной кампании
+  price: 30 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: included
+    leads: 
+-
+  name: Настройка рекламы на основной продукт
+  option: да/нет
+  content: Создание баннеров<br>Подбор аудиторий<br>Подготовка рекламных объявлений<br>Настройка и запуск рекламы<br>Отчёт по результатам тестовой рекламной кампании
+  price: 20 000
+  packages:
+    start:
+    startplus: included
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: Настройка рекламы на лидмагнит
+  option: да/нет
+  content: Создание баннеров<br>Подбор аудиторий<br>Подготовка рекламных объявлений<br>Настройка и запуск рекламы<br>Отчёт по результатам тестовой рекламной кампании
+  price: 30 000
+  packages:
+    start:
+    startplus: 
+    optimal: included
+    premium: included
+    test: 
+    leads: 
+-
+  name: Ведение проекта на четвёртом этапе
+  option: за 1 месяц
+  content: Контроль за обработкой заявок в течение четвертого этапа 1 месяц
+  price: 4 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Ведение рекламной кампании
+  option: за 1 месяц
+  content: Ведение рекламной кампании<br>Предоставление еженедельного отчета о ходе рекламы
+  price: 20 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: Монтаж видео
+  option: за 1 видеоролик до 5 минут
+  content: 
+  price: 2 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
+-
+  name: 
+  option: каждый следующий неполный час
+  content: 
+  price: 4 000
+  packages:
+    start:
+    startplus: 
+    optimal: 
+    premium: 
+    test: 
+    leads: 
